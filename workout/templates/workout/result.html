@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2？family = Noto + Serif + JP：wght @ 200＆ display = swap "
+      rel=" stylesheet "
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'result.css' %}"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Result</title>
+    <link
+      rel="shortcut icon"
+      href="{% static 'favicon.png' %}"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <div class={{ sex_content }}>
+      <div class="square">
+        <div class="period">
+          <h1>期間</h1>
+          <h2 class="period-title">{{ period }}</h2>
+          <h5>※目標体重は{{ goal_weight }}kgです</h5>
+        </div>
+        <div class="food-menu">食事</div>
+        <div class="morning">
+          <div class="morning-title">朝食</div>
+          <div class="morning-main"><span>主食 : </span>{{ morning_main }}</div>
+          <div class="morning-menu">
+            <span>おかず : </span>{{ morning_menu01 }} {{ morning_menu02 }} {{ morning_menu03 }} {{ morning_menu04 }} {{ morning_menu05 }}
+          </div>
+        </div>
+        <div class="lunch">
+          <div class="lunch-title">昼食</div>
+          <div class="lunch-main"><span>主食 : </span>{{ lunch_main }}</div>
+          <div class="lunch-menu">
+            <span>おかず : </span>{{ lunch_menu01 }} {{ lunch_menu02 }} {{ lunch_menu03 }} {{ lunch_menu04 }} {{ lunch_menu05 }}
+          </div>
+        </div>
+        <div class="dinner">
+          <div class="dinner-title">夕食</div>
+          <div class="dinner-main"><span>主食 : </span>{{ dinner_main }}</div>
+          <div class="dinner-menu">
+            <span>おかず : </span>{{ dinner_menu01 }} {{ dinner_menu02 }} {{ dinner_menu03 }} {{ dinner_menu04 }} {{ dinner_menu05 }}
+          </div>
+        </div>
+        <div class="snack">
+          <div class="snack-title">間食</div>
+          <div class="snack-main">
+            <span>間食 : </span>{{ snack01 }} {{ snack02 }} {{ snack03 }}
+          </div>
+        </div>
+        <div class="workout-title">トレーニング</div>
+        <div class="workout-menu">
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="part" scope="col">部位</th>
+                <th class="event"scope="col">種目</th>
+                <th class="rep" scope="col">レップ</th>
+                <th class="set" scope="col">セット</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% if workout_type == "big" %}
+              <tr>
+                <th scope="row">{{ breast_title }}</th>
+                <td>{{ breast_menu }}</td>
+                <td>{{ breast_rep }}</td>
+                <td>{{ breast_set }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ sholder_title }}</th>
+                <td>{{ sholder_menu }}</td>
+                <td>{{ sholder_rep }}</td>
+                <td>{{ sholder_set }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ back_title }}</th>
+                <td>{{ back_menu }}</td>
+                <td>{{ back_rep }}</td>
+                <td>{{ back_set }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ arm01_title }}</th>
+                <td>{{ arm01_menu }}</td>
+                <td>{{ arm01_rep }}</td>
+                <td>{{ arm01_set }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ arm02_title }}</th>
+                <td>{{ arm02_menu }}</td>
+                <td>{{ arm02_rep }}</td>
+                <td>{{ arm02_set }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ reg01_title }}</th>
+                <td>{{ reg01_menu }}</td>
+                <td>{{ reg01_rep }}</td>
+                <td>{{ reg01_set }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ reg02_title }}</th>
+                <td>{{ reg02_menu }}</td>
+                <td>{{ reg02_rep }}</td>
+                <td>{{ reg02_set }}</td>
+              </tr>
+              {% endif %} {% if workout_type == "normal" %}
+              <tr>
+                <th scope="row">{{ breast_title }}</th>
+                <td>{{ breast_menu }}</td>
+                <td>{{ breast_rep }}</td>
+                <td>{{ breast_set }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ sholder_title }}</th>
+                <td>{{ sholder_menu }}</td>
+                <td>{{ sholder_rep }}</td>
+                <td>{{ sholder_set }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ back_title }}</th>
+                <td>{{ back_menu }}</td>
+                <td>{{ back_rep }}</td>
+                <td>{{ back_set }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ arm01_title }}</th>
+                <td>{{ arm01_menu }}</td>
+                <td>{{ arm01_rep }}</td>
+                <td>{{ arm01_set }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ reg01_title }}</th>
+                <td>{{ reg01_menu }}</td>
+                <td>{{ reg01_rep }}</td>
+                <td>{{ reg01_set }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ run_title }}</th>
+                <td>{{ run_menu }}</td>
+                <td>{{ run_rep }}</td>
+                <td>{{ run_set }}</td>
+              </tr>
+              {% endif %} {% if workout_type == "diet" %}
+              <tr>
+                <th scope="row">{{ abs01_title }}</th>
+                <td>{{ abs01_menu }}</td>
+                <td>{{ abs01_rep }}</td>
+                <td>{{ abs01_set }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ abs02_title }}</th>
+                <td>{{ abs02_menu }}</td>
+                <td>{{ abs02_rep }}</td>
+                <td>{{ abs02_set }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ back_title }}</th>
+                <td>{{ back_menu }}</td>
+                <td>{{ back_rep }}</td>
+                <td>{{ back_set }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ waist01_title }}</th>
+                <td>{{ waist01_menu }}</td>
+                <td>{{ waist01_rep }}</td>
+                <td>{{ waist01_set }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ waist02_title }}</th>
+                <td>{{ waist02_menu }}</td>
+                <td>{{ waist02_rep }}</td>
+                <td>{{ waist02_set }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ reg01_title }}</th>
+                <td>{{ reg01_menu }}</td>
+                <td>{{ reg01_rep }}</td>
+                <td>{{ reg01_set }}</td>
+              </tr>
+              <tr>
+                <th scope="row">{{ run_title }}</th>
+                <td>{{ run_menu }}</td>
+                <td>{{ run_rep }}</td>
+                <td>{{ run_set }}</td>
+              </tr>
+              {% endif %}
+            </tbody>
+          </table>
+          <div class="break-time">※セット間の休憩時間は1~3分が目安です</div>
+        </div>
+      </div>
+    </div>
+    <div class="video-guide">
+      <div class="video-title">参考動画</div>
+      <div class="meal-video">
+        <div class="meal-video-title">食事</div>
+        <div class="meal01">
+          <iframe
+            src={{ meal_video01 }}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="meal02">
+          <iframe
+            src={{ meal_video02 }}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="meal03">
+          <iframe
+            src={{ meal_video03 }}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="workout-video">
+        <div class="workout-video-title">トレーニング</div>
+        <div class="workout01">
+          <iframe
+            src={{ workout_video01 }}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="workout02">
+          <iframe
+            src={{ workout_video02 }}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="workout03">
+          <iframe
+            src={{ workout_video03 }}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="decision">
+        <a href="/"
+          ><button type="button" class="btn btn-success">戻る</button></a
+        >
+      </div>
+    </div>
+  </body>
+  <footer class="footer">
+    <p>@Ishizaka2021</p>
+  </footer>
+</html>
