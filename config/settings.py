@@ -26,8 +26,7 @@ SECRET_KEY = 'lut+jbmx(gdtg+nhps+6^2*-*p4slubfy7!)+50_f$1+)9n42y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = ['n-ishizaka8299-workout.herokuapp.com']
 
 # Application definition
 
