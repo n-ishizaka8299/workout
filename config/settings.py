@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'workout',
+    'workout.apps.WorkoutConfig',
 ]
 
 # WHITENOISE_USE_FINDERS = True
