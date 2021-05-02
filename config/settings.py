@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'lut+jbmx(gdtg+nhps+6^2*-*p4slubfy7!)+50_f$1+)9n42y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
 ALLOWED_HOSTS = ['*']
@@ -119,7 +119,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # staticフォルダの場所
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [BASE_DIR / 'static/']
 # whitenoise設定
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
