@@ -27,7 +27,7 @@ SECRET_KEY = 'lut+jbmx(gdtg+nhps+6^2*-*p4slubfy7!)+50_f$1+)9n42y'
 DEBUG = False
 # DEBUG_PROPAGATE_EXCEPTIONS = True
 
-ALLOWED_HOSTS = ['https://workout-app-naoto.herokuapp.com/', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
