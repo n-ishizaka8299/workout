@@ -4,7 +4,7 @@
 
 .navbar-brand {
     color:black;
-    font-size: 1.0rem;
+    font-size: 16px;
     padding: 0;
     margin: 0;
 }
@@ -12,7 +12,7 @@
 @media (min-width: 481px) {
 .navbar-brand {
     color:black;
-    font-size: 1.2rem;
+    font-size: 19px;
     padding: 0;
     margin: 0;
 }
@@ -21,7 +21,7 @@
 @media (min-width: 1026px) {
 .navbar-brand {
     color:black;
-    font-size: 1.2rem;
+    font-size: 19px;
     padding: 0;
     margin: 0;
 }
@@ -281,13 +281,13 @@
     border-bottom: dotted 2px #006600;
     position: relative;
     top: 5px;
+    color: black
 }
 
 .all-des {
     text-align: center;
     color:black; 
 }
-
 
 .small-des {
     font-size: 12px;
@@ -429,6 +429,7 @@
     border-bottom: dotted 2px #006600;
     position: relative;
     top: 5px;
+    color: black;
 }
 
 .all-des {
@@ -579,6 +580,7 @@
     border-bottom: dotted 2px #006600;
     position: relative;
     top: 25px;
+    color: black;
 }
 
 .all-des {
@@ -699,6 +701,10 @@
     color: #006600;
 }
 
+.cp_ipselect01 {
+    text-align: center;
+}
+
 .sex h2 {
     font-size: 15px;
     font-weight: 600;
@@ -706,6 +712,10 @@
     position: relative;
     top: 75px;
     color: #006600;
+}
+
+.cp_ipselect02 {
+    text-align: center;
 }
 
 .old  h2 {
@@ -717,13 +727,21 @@
     color: #006600;
 }
 
+.cp_ipselect03 {
+    text-align: center;
+}
+
 .height h2 {
     font-size: 15px;
     font-weight: 600;
     letter-spacing: 3px;
-    position: relative;
+
     top: 115px;
     color: #006600;
+}
+
+.cp_ipselect04 {
+    text-align: center;
 }
 
 .weight  h2 {
@@ -733,6 +751,10 @@
     position: relative;
     top: 135px;
     color: #006600;
+}
+
+.cp_ipselect05 {
+    text-align: center;
 }
 
 .decision {
@@ -796,6 +818,10 @@
     color: #006600;
 }
 
+.cp_ipselect01 {
+    text-align: center;
+}
+
 .sex h2 {
     font-size: 18px;
     font-weight: 600;
@@ -803,6 +829,10 @@
     position: relative;
     top: 75px;
     color: #006600;
+}
+
+.cp_ipselect02 {
+    text-align: center;
 }
 
 .old  h2 {
@@ -814,6 +844,10 @@
     color: #006600;
 }
 
+.cp_ipselect03 {
+    text-align: center;
+}
+
 .height h2 {
     font-size: 18px;
     font-weight: 600;
@@ -823,6 +857,10 @@
     color: #006600;
 }
 
+.cp_ipselect04 {
+    text-align: center;
+}
+
 .weight  h2 {
     font-size: 18px;
     font-weight: 600;
@@ -830,6 +868,10 @@
     position: relative;
     top: 135px;
     color: #006600;
+}
+
+.cp_ipselect05 {
+    text-align: center;
 }
 
 .decision {
@@ -894,6 +936,10 @@
     color: #006600;
 }
 
+.cp_ipselect01 {
+    text-align: center;
+}
+
 .sex h2 {
     font-size: 25px;
     font-weight: 600;
@@ -901,6 +947,10 @@
     position: relative;
     top: 75px;
     color: #006600;
+}
+
+.cp_ipselect02 {
+    text-align: center;
 }
 
 .old  h2 {
@@ -912,6 +962,10 @@
     color: #006600;
 }
 
+.cp_ipselect03 {
+    text-align: center;
+}
+
 .height h2 {
     font-size: 25px;
     font-weight: 600;
@@ -921,6 +975,10 @@
     color: #006600;
 }
 
+.cp_ipselect04 {
+    text-align: center;
+}
+
 .weight  h2 {
     font-size: 25px;
     font-weight: 600;
@@ -928,6 +986,10 @@
     position: relative;
     top: 135px;
     color: #006600;
+}
+
+.cp_ipselect05 {
+    text-align: center;
 }
 
 .decision { 

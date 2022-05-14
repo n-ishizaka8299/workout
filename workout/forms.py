@@ -101,6 +101,11 @@ HEIGHT = (
 
 #index.htmlに表示する、体重の選択肢
 WEIGHT = (
+    ('35', '35kg'),
+    ('36', '36kg'),
+    ('37', '37kg'),
+    ('38', '38kg'),
+    ('39', '39kg'),
     ('40', '40kg'),
     ('41', '41kg'),
     ('42', '42kg'),
@@ -164,4 +169,4 @@ class SelectForm(forms.Form):
     def clean(self):
         # 上記のデータをリスト型に、それぞれ取り出す
         data = super().clean()
-        return data     
+        return data

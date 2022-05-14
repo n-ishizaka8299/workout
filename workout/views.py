@@ -1,3 +1,4 @@
+from unittest import result
 from django.shortcuts import render, redirect
 from django.http.response import HttpResponse
 from django.template.context_processors import csrf
@@ -335,7 +336,7 @@ class Result(FormView):
             waist01_title = waist01_menu = waist01_rep = waist01_set = ''
             waist02_title = waist02_menu = waist02_rep = waist02_set = ''
 
-        # ダイエット用のトレーニンふ
+        # ダイエット用のトレーニング
         else:
             # index.htmlの表示を分岐するための変数
             workout_type = 'diet'
@@ -465,8 +466,20 @@ class Result(FormView):
         else:
             sex_content = 'women-content'    
 
+        # 目標体重との差分体重
+        diff_weight = goal_weight - weight
+        result_diff = ''
+        if diff_weight == 0:
+            result_diff = '現体重をキープ'
+        
+        elif 0 < diff_weight:
+            result_diff = '+' + str(diff_weight) + 'kg'
+
+        else:
+            result_diff = str(diff_weight) + 'kg'        
+
         # 生成したデータを、tmpに返せるdict型に変換
-        ctxt = self.get_context_data(period=period, goal_weight=goal_weight, 
+        ctxt = self.get_context_data(period=period, goal_weight=goal_weight, result_diff=result_diff,
                                      morning_main=morning_main, morning_menu01=morning_menu01, morning_menu02=morning_menu02, morning_menu03=morning_menu03, morning_menu04=morning_menu04, morning_menu05=morning_menu05, 
                                      lunch_main=lunch_main, lunch_menu01=lunch_menu01, lunch_menu02=lunch_menu02, lunch_menu03=lunch_menu03, lunch_menu04=lunch_menu04, lunch_menu05=lunch_menu05,
                                      dinner_main=dinner_main, dinner_menu01=dinner_menu01, dinner_menu02=dinner_menu02, dinner_menu03=dinner_menu03, dinner_menu04=dinner_menu04, dinner_menu05=dinner_menu05,
@@ -510,14 +523,13 @@ class Index(FormView):
 
         # form.cleaned_dataにフォームの入力内容が格納
         data = form.cleaned_data
-        sex = data['sex']
         goal = data['goal']
-        place = data['place']
+        sex = data['sex']
         old = data['old']
         height = data['height']
         weight = data['weight']
 
         # テンプレートに渡す
-        ctxt = self.get_context_data(sex=sex, goal=goal, place=place, old=old, height=height,
+        ctxt = self.get_context_data(goal=goal, sex=sex, old=old, height=height, weight=weight,
                                      form=form)                           
         return self.render_to_response(ctxt)

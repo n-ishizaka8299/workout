@@ -39,7 +39,7 @@
         <div class="period">
           <h1>期間</h1>
           <h2 class="period-title">{{ period }}</h2>
-          <h5>※目標体重は{{ goal_weight }}kgです</h5>
+          <h5>※目標体重は{{ goal_weight }}kgです({{ result_diff }})</h5>
         </div>
         <div class="food-menu">食事</div>
         <div class="morning">
@@ -207,7 +207,9 @@
               {% endif %}
             </tbody>
           </table>
-          <div class="break-time">※セット間の休憩時間は1~3分が目安です</div>
+          <div class="break-time">
+            ※週2回、3セット10回の休憩時間は1~3分が目安です
+          </div>
         </div>
       </div>
     </div>
