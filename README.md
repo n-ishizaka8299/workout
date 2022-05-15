@@ -25,7 +25,7 @@ $ pip install whitenoise==5.2.0
 # Usage
 
 bash  
-$ git clone https://github.com/n-ishizaka8299/workout-test.git  
+$ git clone https://github.com/n-ishizaka8299/workout.git
 $ cd workout-test  
 $ python3 manage.py runserver  
 
