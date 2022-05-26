@@ -22,13 +22,6 @@ $ pip install django==3.1
 $ pip install gunicorn==20.1.0  
 $ pip install whitenoise==5.2.0  
 
-# Usage
-
-bash  
-$ git clone https://github.com/n-ishizaka8299/workout.git
-$ cd workout-test  
-$ python3 manage.py runserver  
-
 # URL  
 
 https://first-step-workout.herokuapp.com  
